@@ -4,6 +4,7 @@ import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import React from 'react';
 import './App.css';
 import { getDatabase, ref, push, set, onChildAdded } from "firebase/database";
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 
 function App() {
@@ -26,30 +27,37 @@ function App() {
         console.log("chats12", chats)
       });
     }
-   
+
     else {
       console.log("--none--");
     }
 
   }, [value])
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     setValue(true)
-  },[])
+  }, [])
 
 
 
- 
+
 
 
 
   const sendchat = () => {
 
-    const chatRef = push(chatListRef);
-    set(chatRef,{
-      name, message: msg
-    });
-    
+    if (!msg) {
+      alert('Enter some message!!!!')
+    }
+    else {
+      const chatRef = push(chatListRef);
+      set(chatRef, {
+        name, message: msg
+      });
+
+    }
+
+
     setMsg('')
   }
 
@@ -67,18 +75,20 @@ function App() {
         {
           name ?
             <>
-              <Box component='div' sx={{ width: 838, height: 715, overflowY:'scroll'}} id='scroll-chat'>
+              <ScrollToBottom initialScrollBehavior='smooth'>
+                <Box component='div' sx={{ width: 823, height: 715 }} >
 
-                {chats?.map((c, i) => (
+                  {chats?.map((c, i) => (
 
-                  <Stack key={i} alignItems={c.name === name ? 'flex-end' : 'flex-start'} sx={{ ml: 2, mr: 2 }} >
-                    <Box component='p' sx={{ width: 'auto', height: 'auto', bgcolor: '#AA00FF', color: 'white', borderRadius: 25, p: 2, fontSize: 18, fontFamily: 'cursive', textTransform: 'capitalize' }}>{c?.name} : {c?.message}</Box>
-                  </Stack>
+                    <Stack key={i} alignItems={c.name === name ? 'flex-end' : 'flex-start'} sx={{ ml: 2, mr: 2 }} >
+                      <Box component='p' sx={{ width: 'auto', height: 'auto', bgcolor: '#AA00FF', color: 'white', borderRadius: 25, p: 2, fontSize: 18, fontFamily: 'cursive', textTransform: 'capitalize' }}>{c?.name} : {c?.message}</Box>
+                    </Stack>
 
-                ))
-                }
+                  ))
+                  }
 
-              </Box>
+                </Box>
+              </ScrollToBottom>
 
               <Box component='div' sx={{ position: 'sticky', mt: 3 }} >
                 <Stack direction='row' >
