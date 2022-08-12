@@ -64,7 +64,7 @@ function App() {
   return (
     <>
 
-      <Paper sx={{ bgcolor: '#1F1B24', width: '50vw', mx: '25%', height: '98vh', my: 1, borderRadius: '14px' }} elevation={7}>
+      <Paper sx={{ bgcolor: '#1F1B24', width: '35vw', mx: '25%', height: '98vh', my: 1, borderRadius: '14px' }} elevation={7}>
 
         <Box component='div' sx={{ bgcolor: '#6200EE', height: 0.08, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: '14px 14px 0px 0px' }}>
           <Typography sx={{ color: 'white', fontFamily: 'fantasy', fontSize: 35, p: 1, ml: 1 }}>
@@ -76,7 +76,7 @@ function App() {
           name ?
             <>
               <ScrollToBottom initialScrollBehavior='smooth'>
-                <Box component='div' sx={{ width: 823, height: 715 }} >
+                <Box component='div' sx={{ width: 580, height: 715 }} >
 
                   {chats?.map((c, i) => (
 
