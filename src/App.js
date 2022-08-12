@@ -45,14 +45,20 @@ function App() {
 
   const sendchat = () => {
 
-    const chatRef = push(chatListRef);
-    set(chatRef,{
-      name, message: msg
-    });
+    if(!msg){
+      alert('Enter some message!!!!')
+    }
+    else{
+      const chatRef = push(chatListRef);
+      set(chatRef,{
+        name, message: msg
+      });
+
+    }
+
     
     setMsg('')
   }
-
   return (
     <>
 
