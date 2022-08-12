@@ -46,21 +46,13 @@ function App() {
 
   const sendchat = () => {
 
-    if (!msg) {
-      alert('Enter some message!!!!')
-    }
-    else {
-      const chatRef = push(chatListRef);
-      set(chatRef, {
-        name, message: msg
-      });
-
-    }
-
-
+    const chatRef = push(chatListRef);
+    set(chatRef,{
+      name, message: msg
+    });
+    
     setMsg('')
   }
-
   return (
     <>
 
@@ -75,8 +67,7 @@ function App() {
         {
           name ?
             <>
-              <ScrollToBottom initialScrollBehavior='smooth'>
-                <Box component='div' sx={{ width: 823, height: 715 }} >
+              <Box component='div' sx={{ width: 838, height: 715, overflowY:'scroll'}} id='scroll-chat'>
 
                   {chats?.map((c, i) => (
 
@@ -84,11 +75,10 @@ function App() {
                       <Box component='p' sx={{ width: 'auto', height: 'auto', bgcolor: '#AA00FF', color: 'white', borderRadius: 25, p: 2, fontSize: 18, fontFamily: 'cursive', textTransform: 'capitalize' }}>{c?.name} : {c?.message}</Box>
                     </Stack>
 
-                  ))
-                  }
+                ))
+                }
 
-                </Box>
-              </ScrollToBottom>
+              </Box>
 
               <Box component='div' sx={{ position: 'sticky', mt: 3 }} >
                 <Stack direction='row' >
