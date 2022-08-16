@@ -104,7 +104,7 @@ function App() {
             <>
               <Typography sx={{ color: 'white', ml: 20, mt: 10, textTransform: 'capitalize', fontWeight: 600 }}>enter the name & click on screen</Typography>
               <Paper sx={{ height: 50, width: 300, ml: 18, bgcolor: '#7E57C2' }}>
-                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 1, ml: 4.5, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
+                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 0.5, ml: 3, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
               </Paper>
             </>
         }
