@@ -64,7 +64,7 @@ function App() {
   return (
     <>
 
-      <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'auto'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
+      <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'100vh'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
 
         <Box component='div' sx={{ bgcolor: '#6200EE', height:{xl:0.08,xs:'auto'}, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: { xl:'14px 14px 0px 0px',xs:'0px 0px 0px 0px'}  }}>
           <Typography sx={{ color: 'white', fontFamily: 'fantasy', fontSize: 35, p: 1, ml: 1 }}>
@@ -90,7 +90,7 @@ function App() {
                 </Box>
               </ScrollToBottom>
 
-              <Box component='div' sx={{ position: 'sticky', mt: 3 }} >
+              <Box component='div' sx={{ position: 'sticky', mt:{xl:3,xs:0} }} >
                 <Stack direction='row' >
                   <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3', borderRadius:25, mb:0,color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml:2, width: {xl:'87%',xs:'auto'} }} disableUnderline></Input>
                   <Fab onClick={sendchat} aria-label="edit" style={{ backgroundColor: '#BB86FC' }} sx={{ ml: 1 }}>
