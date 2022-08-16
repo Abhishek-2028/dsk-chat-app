@@ -76,7 +76,7 @@ function App() {
           name ?
             <>
               <ScrollToBottom initialScrollBehavior='smooth'>
-                <Box component='div' sx={{ width: 580, height: 715 }} >
+                <Box component='div' sx={{ width: 580, height:{xl:715,xs:'auto'} }} >
 
                   {chats?.map((c, i) => (
 
