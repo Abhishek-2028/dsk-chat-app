@@ -66,7 +66,7 @@ function App() {
 
       <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'100vh'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
 
-        <Box component='div' sx={{ bgcolor: '#6200EE', height:{xl:0.08,xs:0.09}, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: { xl:'14px 14px 0px 0px',xs:'0px 0px 0px 0px'}  }}>
+        <Box component='div' sx={{ bgcolor: '#6200EE', height:{xl:0.08,xs:'auto'}, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: { xl:'14px 14px 0px 0px',xs:'0px 0px 0px 0px'}  }}>
           <Typography sx={{ color: 'white', fontFamily: 'fantasy', fontSize: 35, p: 1, ml: 1 }}>
             chat app
           </Typography>
@@ -105,7 +105,7 @@ function App() {
               <Typography sx={{ color: 'white', ml:{xl:20,xs:7}, mt: 10, textTransform: 'capitalize', fontWeight: 600 }}>enter the name & click on screen</Typography>
               {/* <Paper sx={{ height: 50, width: 250, ml:{xl:18,xs:7}, bgcolor: '#7E57C2' }}>
               </Paper> */}
-                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 1, ml: {xl:15,xs:6}, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
+                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 1, ml: {xl:15,xs:4}, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
             </>
         }
 
