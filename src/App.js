@@ -92,7 +92,7 @@ function App() {
 
               <Box component='div' sx={{ position: 'sticky', mt: 3 }} >
                 <Stack direction='row' >
-                  <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3', borderRadius: {xl:25,xs:8}, color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml: 2, width: '87%' }} disableUnderline></Input>
+                  <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3', borderRadius: {xl:25,xs:8}, color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml:{xl:2,xs:1}, width: {xl:'87%',xs:'auto'} }} disableUnderline></Input>
                   <Fab onClick={sendchat} aria-label="edit" style={{ backgroundColor: '#BB86FC' }} sx={{ ml: 1 }}>
                     <SendRoundedIcon sx={{ color: 'white' }} />
                   </Fab>
@@ -104,7 +104,7 @@ function App() {
             <>
               <Typography sx={{ color: 'white', ml: 20, mt: 10, textTransform: 'capitalize', fontWeight: 600 }}>enter the name & click on screen</Typography>
               <Paper sx={{ height: 50, width: 300, ml: 18, bgcolor: '#7E57C2' }}>
-                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 0.5,mb:0.5, ml: 3, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
+                <Input disableUnderline sx={{ bgcolor: '#3700B3', color: 'white', mt: 1, ml: 4.5, borderRadius: 25, pl: 1.5, pr: 1.5 }} onBlur={e => setname(e.target.value)}></Input>
               </Paper>
             </>
         }
