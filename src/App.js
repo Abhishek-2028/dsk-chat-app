@@ -66,7 +66,7 @@ function App() {
 
       <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'auto'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
 
-        <Box component='div' sx={{ bgcolor: '#6200EE', height: 0.08, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: '14px 14px 0px 0px' }}>
+        <Box component='div' sx={{ bgcolor: '#6200EE', height: 0.08, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: { xl:'14px 14px 0px 0px',xs:'0px 0px 0px 0px'}  }}>
           <Typography sx={{ color: 'white', fontFamily: 'fantasy', fontSize: 35, p: 1, ml: 1 }}>
             chat app
           </Typography>
