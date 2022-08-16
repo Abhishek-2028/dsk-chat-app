@@ -64,7 +64,7 @@ function App() {
   return (
     <>
 
-      <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'98vh'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
+      <Paper sx={{ bgcolor: '#1F1B24', width:{xl:'35vw',xs:'auto'}, mx: {xl:'25%'}, height: {xl:'98vh',xs:'100vh'}, my: {xl:1,xs:0}, borderRadius: {xl:'14px',xs:'0px'} }} elevation={7} >
 
         <Box component='div' sx={{ bgcolor: '#6200EE', height:{xl:0.08,xs:'auto'}, mt: 0, width: 'inherit', fontFamily: 'fantasy', borderRadius: { xl:'14px 14px 0px 0px',xs:'0px 0px 0px 0px'}  }}>
           <Typography sx={{ color: 'white', fontFamily: 'fantasy', fontSize: 35, p: 1, ml: 1 }}>
@@ -77,7 +77,6 @@ function App() {
             <>
               <ScrollToBottom initialScrollBehavior='smooth'>
                 <Box component='div' sx={{ width:{xl:580,xs:'350px'}, height:{xl:715,xs:'516px'} }} >
-
                   {chats?.map((c, i) => (
 
                     <Stack key={i} alignItems={c.name === name ? 'flex-end' : 'flex-start'} sx={{ ml: 2, mr: 2 }} >
@@ -86,7 +85,6 @@ function App() {
        
                   ))
                   }
-
                 </Box>
               </ScrollToBottom>
 
