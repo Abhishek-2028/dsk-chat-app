@@ -88,7 +88,7 @@ function App() {
                 </Box>
               </ScrollToBottom>
 
-              <Box component='div' sx={{ position: 'sticky', mt:{xl:3,xs:0} }} >
+              <Box component='div' sx={{  mt:{xl:3,xs:0} }} >
                 <Stack direction='row' >
                   <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3',mt:{xs:3} ,borderRadius:25, mb:0,color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml:2, width: {xl:'87%',xs:'auto'} }} disableUnderline></Input>
                   <Fab onClick={sendchat} aria-label="edit" style={{ backgroundColor: '#BB86FC' }} sx={{ ml: 1 }}>
