@@ -92,7 +92,7 @@ function App() {
 
               <Box component='div' sx={{ position: 'sticky', mt: 3 }} >
                 <Stack direction='row' >
-                  <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3', borderRadius: 25, color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml: 2, width: '87%' }} disableUnderline></Input>
+                  <Input onChange={e => setMsg(e.target.value)} value={msg} sx={{ bgcolor: '#3700B3', borderRadius: {xl:25,xs:12}, color: 'white', fontFamily: "cursive", p: 1.5, fontSize: 20, ml: 2, width: '87%' }} disableUnderline></Input>
                   <Fab onClick={sendchat} aria-label="edit" style={{ backgroundColor: '#BB86FC' }} sx={{ ml: 1 }}>
                     <SendRoundedIcon sx={{ color: 'white' }} />
                   </Fab>
